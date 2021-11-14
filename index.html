@@ -132,8 +132,8 @@
     </div>
 
     <div id="thongBao">CHÀO MỪNG BẠN ĐẾN VỚI GAME CARO 9 Ô CỦA NGUYỄN VĂN LƯƠNG</div>
-    <button class="luaChon" id="start" onclick="resetGame(0); gameOX()">Bắt đầu chơi</button>
     <button class="luaChon" id="playWithComputer" onclick="resetGame(1); gameOX()">Đánh với máy</button>
+    <!-- <button class="luaChon" id="start" onclick="resetGame(0); gameOX()">2 người chơi</button> -->
     <script>
         var nguoiThang = 0;
         var luaChon = 0, a = 0, lanDanh = 1;
@@ -190,7 +190,7 @@
             }
             a = 0;
             document.getElementById("playWithComputer").style.display = "none";
-            document.getElementById("start").style.display = "none";
+            // document.getElementById("start").style.display = "none";
             document.getElementById("khungGame").style.zIndex = "1";
             for (let i = 0; i < dataOX.length; i++) {
                 dataOX[i] = 0;
@@ -204,7 +204,7 @@
             testNguoiChoi = 1;
         }
         function gameOX(x) {
-            document.getElementById("start").style.display = "none";
+            // document.getElementById("start").style.display = "none";
             document.getElementById("thongBao").style.display = "none";
             document.getElementById("playWithComputer").style.display = "none";
             playWithComputer
@@ -721,8 +721,8 @@
                 if (i == dataOX.length) {
                     document.getElementById("thongBao").style.display = "block";
                     document.getElementById("thongBao").innerHTML = "Hai Bên Hòa";
-                    document.getElementById("start").style.display = "block";
-                    document.getElementById("start").innerHTML = "Chơi Lại";
+                    // document.getElementById("start").style.display = "block";
+                    // document.getElementById("start").innerHTML = "Chơi Lại";
                     document.getElementById("playWithComputer").style.display = "block";
                     document.getElementById("khungGame").style.zIndex = "-1";
                     xacNhanHoa = true;
@@ -748,8 +748,8 @@
                     document.getElementById("thongBao").innerHTML = "Máy đã thắng";
                     xacNhanNguoiChoiThang = false;
                 }
-                document.getElementById("start").style.display = "block";
-                document.getElementById("start").innerHTML = "Chơi Lại";
+                // document.getElementById("start").style.display = "block";
+                // document.getElementById("start").innerHTML = "Chơi Lại";
                 document.getElementById("khungGame").style.zIndex = "-1";
                 document.getElementById("playWithComputer").style.display = "block";
                 document.getElementById("playWithComputer").innerHTML = "Chơi lại với máy";
